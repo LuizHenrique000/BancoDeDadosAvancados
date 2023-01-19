@@ -20,8 +20,13 @@ VALUES (002, True, 'Rua Primeiro de Abril, 3660', {'Limpeza':'Detergente'});
 INSERT INTO "my_keyspace"."produtos" (id_item, pronta_entrega, endereco, itens) 
 VALUES (003, True, 'Rua 25 de Marco, 20, Bloco A', {'Limpeza':'Amaciante', 'Higiene':'Shampoo'});
 
-NSERT INTO "my_keyspace"."produtos" (id_item, pronta_entrega, endereco, itens) 
+INSERT INTO "my_keyspace"."produtos" (id_item, pronta_entrega, endereco, itens) 
 VALUES (004, True, 'Avenida Carlos Gomes, 3681-B', {'Papelaria':'Caderno'});
+
+CREATE KEYSPACE IF NOT EXISTS "locadora"
+WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+USE locadora;
 
 CREATE TABLE "locadora"."videos_por_titulo" (
 title text,
