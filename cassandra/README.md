@@ -31,4 +31,4 @@ Mova ele para a pasta que criamos para guardar os dados do cassandra
 
 `mv Home/Downloads/videos_by_title_year.csv /var/lib/cassandra`
 
-Agora est
+Pronto, tudo concluido!
